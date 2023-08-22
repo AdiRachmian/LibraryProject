@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="LibraryProject.NewItemDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Height="490" Margin="10,10,0,0" VerticalAlignment="Top" Width="780" Background="#FFFFD9ED">
+            <TextBlock x:Name="AuthorBlock" TextWrapping="Wrap" Text="Author:" FontSize="14" Canvas.Left="138" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock TextWrapping="Wrap" Text="Publisher:" FontSize="14" Canvas.Left="137" Canvas.Top="207" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock TextWrapping="Wrap" Text="Genre:" FontSize="14" Canvas.Left="137" Canvas.Top="251"/>
+            <TextBox x:Name="TitleField" TextWrapping="Wrap" Text="" FontSize="14" Canvas.Left="352" Canvas.Top="152" HorizontalAlignment="Left" VerticalAlignment="Center" Width="307"/>
+            <TextBox x:Name="AuthorField" TextWrapping="Wrap" Text="" FontSize="14" Canvas.Left="352" Canvas.Top="103" HorizontalAlignment="Center" VerticalAlignment="Top" Width="307"/>
+            <TextBox x:Name="PublisherField" TextWrapping="Wrap" Text="" FontSize="14" Canvas.Left="352" Canvas.Top="199" HorizontalAlignment="Left" VerticalAlignment="Top" Width="307"/>
+            <TextBlock TextWrapping="Wrap" Text="Release date:" FontSize="14" Canvas.Left="137" Canvas.Top="299" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock TextWrapping="Wrap" Text="Price:" FontSize="14" Canvas.Left="137" Canvas.Top="343" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="PriceField" TextWrapping="Wrap" Text="" FontSize="14" Canvas.Left="352" Canvas.Top="335" HorizontalAlignment="Left" VerticalAlignment="Top" Width="307" BeforeTextChanging="PriceField_BeforeTextChanging"/>
+            <DatePicker x:Name="ReleaseDateField" Height="34" VerticalAlignment="Top" Width="307" Canvas.Left="352" Canvas.Top="292"/>
+            <ComboBox x:Name="GenreField"  Height="35" Width="307" Canvas.Left="352" Canvas.Top="243"/>
+            <Button x:Name="SubmitItemButton" Content="Submit" Height="46" Width="112" Background="#66EB1D90" FontSize="24" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" VerticalAlignment="Top" Canvas.Left="316" Canvas.Top="408" HorizontalAlignment="Center" Click="SubmitItemButton_Click"/>
+            <TextBlock TextWrapping="Wrap" Text="Title:" FontSize="14" Canvas.Left="137" Canvas.Top="159" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Canvas>
+        <CommandBar Height="87" Background="#66EB1D90" Margin="10,10,710,0">
+            <AppBarButton Icon="Library" Label="Inventory" Click="Inventory_Click"/>
+            <AppBarButton Icon="Edit" Label="Daily Report" Click="DailyReport_Click"/>
+            <AppBarButton Icon="Add" Label="Add Item" Click="AddItem_Click"/>
+            <AppBarButton Icon="Setting" Label="Manage Sales" Click="ManageSales_Click"/>
+        </CommandBar>
+    </Grid>
+</Page>

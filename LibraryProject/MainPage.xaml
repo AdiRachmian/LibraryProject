@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="LibraryProject.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+        <Canvas HorizontalAlignment="Left" Height="490" Margin="10,10,0,0" VerticalAlignment="Top" Width="780" Background="#FFFFD9ED" Grid.RowSpan="2">
+            <TextBlock Height="114" TextWrapping="Wrap" Text="WELCOME TO THE LIBRARY" Canvas.Top="64" Width="776" FontSize="48" TextAlignment="Center"/>
+            <TextBlock x:Name="Username" TextWrapping="Wrap" Text="USERNAME:" Canvas.Left="186" Canvas.Top="194" Height="55" Width="148" FontSize="24" FontFamily="Arial Rounded MT Bold" TextAlignment="Left"/>
+            <TextBlock x:Name="Password" TextWrapping="Wrap" Text="PASSWORD:" Canvas.Left="186" Canvas.Top="269" Height="55" Width="143" FontSize="24" FontFamily="Arial Rounded MT Bold" TextAlignment="Left"/>
+            <Button x:Name="LoginButton" Content="ENTER" Height="51" Canvas.Left="282" Canvas.Top="356" Width="152" Background="#66EB1D90" FontSize="24" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Click="LoginButton_Click"/>
+            <TextBox x:Name="UsernameInput" TextWrapping="Wrap" Text="" FontSize="24" Background="#66FFFFFF" Canvas.Left="351" Canvas.Top="186" Width="213"/>
+            <PasswordBox x:Name="PasswordInput" FontSize="24" Canvas.Left="351" Canvas.Top="261" Width="213"/>
+        </Canvas>
+    </Grid>
+</Page>

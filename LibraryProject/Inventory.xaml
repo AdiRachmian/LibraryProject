@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="LibraryProject.Inventory"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        
+        <Canvas HorizontalAlignment="Left" Height="490" Margin="10,10,0,0" VerticalAlignment="Top" Width="780" Background="#FFFFD9ED" Grid.ColumnSpan="2">
+            <ListView x:Name="InventoryList" Height="296" Canvas.Left="14" Canvas.Top="100" Width="502" Background="#66EB1D90" SelectionChanged="InventoryList_SelectionChanged"/>
+            <Grid x:Name="DetailsView" Height="419" Canvas.Left="538" Canvas.Top="54" Width="224" Background="#FFF78EC8">
+                <TextBlock x:Name="DetailsBlock" HorizontalAlignment="Center" Height="352" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Margin="0,10,0,0"/>
+                <TextBlock x:Name="LateBox" HorizontalAlignment="Center" Height="59" Margin="0,362,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="205" Foreground="Red" FontSize="24" TextAlignment="Center" FontWeight="Bold"/>
+            </Grid>
+            <ComboBox x:Name="FilterComboBox" Height="33" Canvas.Left="14" Canvas.Top="54" PlaceholderText="Filter by" Width="189" SelectionChanged="FilterComboBox_SelectionChanged"/>
+            <TextBox x:Name="FilterTextBox" Height="33" Canvas.Left="219" Canvas.Top="54" PlaceholderText="Type here" TextWrapping="Wrap" Width="297" TextChanged="FilterTextBox_TextChanged"/>
+            <ComboBox x:Name="GenreComboBox" Height="33" Canvas.Left="219" Canvas.Top="54" Width="297" PlaceholderText="Pick a genre" SelectionChanged="GenreComboBox_SelectionChanged"/>
+
+
+        </Canvas>
+        <Button x:Name="RentButton" Content="Rent" Height="58" Width="105" Background="#66EB1D90" FontSize="24" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Margin="25,427,0,0" VerticalAlignment="Top" Click="RentButton_Click"/>
+        <Button x:Name="ReturnButton" Content="Return" Height="58" Width="105" Background="#66EB1D90" FontSize="24" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Margin="159,427,0,0" VerticalAlignment="Top" Click="ReturnButton_Click"/>
+        <Button x:Name="EditButton" Content="Edit" Height="58" Width="105" Background="#66EB1D90" FontSize="24" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Margin="290,427,0,0" VerticalAlignment="Top" Click="EditButton_Click"/>
+        <Button x:Name="DeleteButton" Content="Delete" Height="58" Width="105" Background="#66EB1D90" FontSize="24" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Margin="421,427,0,0" VerticalAlignment="Top" Click="DeleteButton_Click"/>
+        <CommandBar x:Name="TopBar" Height="87" Background="#66EB1D90" Margin="10,10,710,0" Grid.ColumnSpan="2">
+            <AppBarButton Icon="Library" Label="Inventory" Click="Inventory_Click"/>
+            <AppBarButton Icon="Edit" Label="Daily Report" Click="DailyReport_Click"/>
+            <AppBarButton Icon="Add" Label="Add Item" Click="AddItem_Click"/>
+            <AppBarButton Icon="Setting" Label="Manage Sales" Click="ManageSales_Click"/>
+        </CommandBar>
+
+    </Grid>
+</Page>
